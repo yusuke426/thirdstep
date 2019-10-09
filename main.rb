@@ -7,9 +7,9 @@ nums = str.split(' ').map{|i| i.to_i() }
 
 # Calculation
 sum = nums.sum()
-variant = nums.map{|i| i * i}.sum() / nums.length
+variance = nums.map{|i| i * i}.sum() / nums.length
 avg = sum / nums.length
-sd = Math.sqrt(variant - (avg*avg))
+sd = Math.sqrt(variance - (avg*avg))
 hensachis = nums.map{|i| (i - avg) * 10 / sd + 50}
 
 print "Average:", avg, " SD:", sd, " SUM:", sum, "\n"
